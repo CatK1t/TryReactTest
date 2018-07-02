@@ -1,0 +1,36 @@
+.app{
+	display: flex;
+}
+.segment{
+	width: 100%;
+	display: flex;
+}
+.Lists{
+	padding-top: 11px;
+	margin: 0;
+	width: 35%;
+	margin-right: 10px;
+}
+.Lists>div{
+	padding: 10px;
+}
+.Lists .clients{
+	padding: 10px 0 10px 10px;
+	border-right: 1px groove grey;
+}
+.Lists .clients .ui.list{
+	cursor: pointer;
+	z-index: 99;
+}
+.Lists .clients .ui.list.active{
+	border-bottom: 2px groove grey;
+	border: 1px groove grey;
+	border-radius: 3%;
+}
+.segment.UserShow{
+	width: 60%;
+	margin: 0;
+}
+.ui.search .ui.icon.input{
+	width: 100%;
+}
