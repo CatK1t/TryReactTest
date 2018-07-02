@@ -22,10 +22,12 @@
 	cursor: pointer;
 	z-index: 99;
 }
-.Lists .clients .ui.list.active{
+.Lists .clients .ui.list.active, .Lists .clients .ui.list:hover{
 	border-bottom: 2px groove grey;
+	background-color: grey;
 	border: 1px groove grey;
 	border-radius: 3%;
+	color: white;
 }
 .segment.UserShow{
 	width: 60%;

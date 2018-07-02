@@ -11,7 +11,7 @@ class UserList extends Component {
 
 	showClient(){
 		return this.props.clients.map((el,k)=>{
-			return <UserRender key={k} data={el} />
+			return <UserRender key={k} data={el} id={k} />
 			
 		})
 		

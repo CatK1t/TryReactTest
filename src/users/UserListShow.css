@@ -1,0 +1,14 @@
+.clientShow{
+	margin: 0 auto;
+	display: flex;
+	padding-top: 10%;
+}
+.clientShow .imgBlock{
+	margin-right: 20px;
+}
+.clientShow .ContentBlock{
+	text-align: center;
+}
+.clientShow span{
+	color: green;
+}

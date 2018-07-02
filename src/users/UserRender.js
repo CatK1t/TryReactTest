@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 
 
 class UserRender extends Component {
@@ -11,6 +13,16 @@ class UserRender extends Component {
 
 		e.currentTarget.className ='ui list active'
 
+		this.listShow(e.currentTarget);
+
+	}
+
+	listShow(e)	{
+		for(var i=0; i<this.props.User.length; i++){
+			const listClient = this.props.User[e.id];
+			this.props.onShowClient(listClient);
+		
+		}
 		
 	}
 
@@ -18,7 +30,7 @@ class UserRender extends Component {
 
     return (
 
-				<div className="ui list" onClick={this.activeClassName.bind(this)}>
+				<div className="ui list" id={this.props.id} onClick={this.activeClassName.bind(this)}>
             <div className="item">
                 <img className="ui avatar image" src={this.props.data.general.avatar} alt="R1" />
                 <div className="content">
@@ -33,5 +45,9 @@ class UserRender extends Component {
 
 
 }
-
-export default UserRender;
+export default connect(state =>({User: state.Clients}),
+dispatch=>({
+	onShowClient: (client)=>{
+	dispatch({ type: 'SHOW_CLIENT', payload:client })}
+})
+)(UserRender);
