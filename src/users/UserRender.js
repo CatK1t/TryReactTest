@@ -10,8 +10,9 @@ class UserRender extends Component {
 		for(var i = 0; i<list.length; i++){
 			list[i].className = 'ui list';
 		}
-
-		e.currentTarget.className ='ui list active'
+		
+		e.currentTarget.className ='ui list active';
+		console.log(e.currentTarget);
 
 		this.listShow(e.currentTarget);
 
@@ -23,14 +24,14 @@ class UserRender extends Component {
 			this.props.onShowClient(listClient);
 		
 		}
-		
+
 	}
 
 	render() {
 
     return (
 
-				<div className="ui list" id={this.props.id} onClick={this.activeClassName.bind(this)}>
+				<div className="ui list" id={this.props.data.id} onClick={this.activeClassName.bind(this)}>
             <div className="item">
                 <img className="ui avatar image" src={this.props.data.general.avatar} alt="R1" />
                 <div className="content">

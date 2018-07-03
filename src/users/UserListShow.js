@@ -8,10 +8,8 @@ class UserListShow extends Component {
 
 
 	creatIconClient() {
-		console.log(this.props.client);
 
 		if(this.props.client.length === 0){
-			console.log('this.props.client');
 		}else{
 			return <div className="clientShow">
 								<div className="imgBlock">
